@@ -41,8 +41,8 @@ public class GoogleDriveStorageService : IStorageService
 
         var response = command.Upload();
 
-        if (response.Status is not Google.Apis.Upload.UploadStatus.Completed or Google.Apis.Upload.UploadStatus.NotStarted)
-            throw response.Exception;
+        if (response.Status is not Google.Apis.Upload.UploadStatus.Completed)
+                throw response.Exception;
 
         return command.ResponseBody.Id;
     }

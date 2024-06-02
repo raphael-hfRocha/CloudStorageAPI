@@ -40,8 +40,12 @@ public class UploadProfilePhotoUseCase : IUploadProfilePhotoUseCase
         return new User
         {
             Id = 1,
-            Name = "Raphael",
-            Email = "raphaelrochaacft@gmail.com"
+            Name = "",
+            Email = "",
+            RefreshToken = "", 
+            AccessToken = ""
         };
     }
 }
+
+
